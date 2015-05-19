@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from .models import Tienda
 
 
 def listaTienda(request):
-    return render(request, 'blog/tiendas.html', {})
+    tiendas = Tienda.objects.all()
+    return render(request, 'blog/tiendas.html', {'tiendas':tiendas})

@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.conf import settings
 
 class Tienda(models.Model):
     TIPO_TIENDA = (('mujer', 'MUJER'), ('hombre', 'HOMBRE'), ('mixta', 'MIXTA'))
@@ -16,7 +16,8 @@ class Tienda(models.Model):
         return self.name
 
 class Ropa(models.Model):
-    TALLA_ROPA = (('xl', 'XL'), ('l', 'L'), ('m', 'M'),('s', 'S'))
+    TALLA_ROPA = (('xl', 'XL'), ('l', 'L'), ('m', 'M'), ('s', 'S'))
+
     class Meta:
         db_table = 'Ropa'
 
