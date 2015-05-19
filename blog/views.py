@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def listaTienda(request):
+    return render(request, 'blog/tiendas.html', {})

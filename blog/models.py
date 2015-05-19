@@ -16,7 +16,7 @@ class Tienda(models.Model):
         return self.name
 
 class Ropa(models.Model):
-    TALLA_ROPA = (('XL', 'xl'), ('L', 'l'), ('M', 'm'),('S', 's'))
+    TALLA_ROPA = (('xl', 'XL'), ('l', 'L'), ('m', 'M'),('s', 'S'))
     class Meta:
         db_table = 'Ropa'
 
